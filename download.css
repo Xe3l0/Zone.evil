@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* لتسهيل التحكم في حجم العناصر */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('/Untitled57_20241008221615.png'); /* الخلفية بالصورة المحددة */
+    background-size: cover; /* ملء الخلفية بالكامل */
+    background-position: center; /* مركز الصورة */
+    height: auto; /* السماح بارتفاع تلقائي */
+    display: flex;
+    flex-direction: column; /* لتكديس العناصر عموديًا */
+    justify-content: flex-start; /* لمحاذاة المحتوى في الأعلى */
+    align-items: center; /* توسيط المحتوى في العرض */
+    overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* لضمان ظهور المحتوى فوق الخلفية */
+    text-align: center; /* توسيط النص داخل الحاوية */
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* اجعل العناصر عمودية */
+    align-items: center; /* توسيط العناصر في العرض */
+    width: 100%; /* لضمان ملء شريط التنقل بالكامل */
+    padding: 25px;
+    z-index: 2; /* لضمان ظهور شريط التنقل فوق الخلفية */
+}
+
+.logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: red;
+    margin-bottom: 20px; /* إضافة مسافة أسفل الشعار */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* توسيط العناصر في القائمة */
+    width: 100%;
+    margin: 0; /* إزالة الهامش الافتراضي */
+}
+
+ul li {
+    margin: 0 10px; /* إضافة مسافة بين العناصر في القائمة */
+}
+
+h1 {
+    color: white; /* لون العنوان */
+    margin: 10px 0; /* إضافة مسافة بين العنوان وبقية المحتوى */
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ثلاثة أعمدة في الشاشات الكبيرة */
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    width: 100%; /* ضمان ملء المساحة بالكامل */
+    z-index: 2; /* لضمان ظهور العناصر فوق الخلفية */
+}
+
+.items div {
+    text-align: center; /* توسيط النص داخل العناصر */
+}
+
+.items img {
+    width: 100%; /* ملء العنصر بالكامل */
+    height: 300px; /* ارتفاع ثابت */
+    object-fit: cover; /* المحافظة على نسبة العرض إلى الارتفاع */
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 10px; /* إضافة هذه السطر لجعل الزوايا مائلة */
+}
+
+.items img:hover {
+    transform: scale(1.04); /* تكبير الصورة عند التمرير */
+}
+
+button {
+    background-color: white; /* لون زر الطلب */
+    color: black; /* لون نص الزر يجب أن يكون مختلفًا عن لون الخلفية */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkred; /* لون الزر عند التمرير */
+}
+
+.item h4 {
+    padding: 5px;
+    text-align: center;
+    color: white; /* لون نص العنصر */
+}
+
+.item button {
+    padding: 10px 30px; /* زيادة الحشو لجعل الزر أوسع */
+    border: none;
+    outline: none;
+    background-color: blue; /* لون الخلفية */
+    color: white; /* لون النص */
+    cursor: pointer;
+    border-radius: 20px; /* جعل الزوايا مائلة */
+    transition: background-color 0.3s, transform 0.3s; /* إضافة تأثير التحول عند التمرير */
+}
+
+.item button:hover {
+    background-color: darkgreen; /* لون الزر عند التمرير */
+    transform: scale(1.05); /* جعل الزر يكبر قليلاً عند التمرير */
+}
+
+/* قواعد لتعديل التصميم في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .items {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+    }
+
+    .items img {
+        height: auto; /* ارتفاع تلقائي للصور */
+    }
+
+    h1 {
+        font-size: 24px; /* تعديل حجم العنوان */
+    }
+}
