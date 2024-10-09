@@ -7,15 +7,188 @@
     <title>Zone Evil</title>
     <meta name="description" content="Zone Evil هو موقع مخصص لتحميل جميع أجزاء لعبة Resident Evil بسهولة مع معلومات عن كل جزء.">
     <meta name="keywords" content="Resident Evil, تحميل, ألعاب, Zone Evil, تحميل Resident Evil, ألعاب رعب, تحميل رزيدنت ايفل مجانا, تحميل جميع اجزاء رزيدنت ايفل, download Resident Evil for free, download all Resident Evil games">
-    <link rel="stylesheet" href="download.css">
-    
-    <!-- كود Google AdSense هنا -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4364922964369747"
-        crossorigin="anonymous"></script>
-
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="download.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-        /* بقية كود CSS هنا */
+
+        * {
+            font-family: 'Ubuntu', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(/Untitled57_20241008221615.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; /* لمنع تكرار الخلفية */
+            min-height: 100vh; /* ضمان تغطية الخلفية لكل ارتفاع الشاشة */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 25px;
+            z-index: 2;
+            max-width: 1200px; /* تعيين حد أقصى للعرض */
+            margin: 0 auto; /* توسيط الهيدر */
+        }
+
+        .logo {
+            font-size: 35px;
+            text-transform: uppercase;
+            color: red;
+            margin-left: auto; /* توسيط الشعار */
+            margin-right: auto; /* توسيط الشعار */
+            flex: 1; /* استغلال المساحة المتاحة */
+            text-align: center; /* محاذاة النص إلى المنتصف */
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 0 4px;
+        }
+
+        h1 {
+            color: white;
+            margin: 40px 0;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 30px 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 30px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        .items img {
+            width: 200px; /* جعل عرض الصور ثابت */
+            height: 200px; /* جعل ارتفاع الصور ثابت */
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.2s ease;
+            border-radius: 10px;
+        }
+
+        .items img:hover {
+            transform: scale(1.04);
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        .item h4 {
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .item button {
+            padding: 10px 30px;
+            border: none;
+            outline: none;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .item button:hover {
+            background-color: darkgreen;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul {
+                width: 100%;
+                justify-content: center;
+                margin: 10px 0;
+            }
+
+            .items {
+                grid-template-columns: 1fr; /* لجعل الصف في عمود واحد */
+            }
+
+            .items img {
+                height: auto; /* لجعل الصور تتناسب مع العرض */
+                width: 100%; /* لملء المساحة المتاحة */
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+        .video-container iframe {
+    width: 100%; 
+    height: 200px; /* ارتفاع ثابت للفيديو */
+    max-width: 1900px; /* عرض أقصى */
+}
+
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 90px; 
+    }
+
+    .content p {
+        font-size: 90px; 
+    }
+
+    .video-container iframe {
+        width: 90%;  
+        height: 0px; /* تحديد ارتفاع أقل على الهواتف */
+    }
     </style>
 </head>
 
@@ -38,6 +211,50 @@
             <h4>RESIDENT EVIL 1</h4>
             <button>download</button>
         </div>
-        <!-- بقية المحتوى -->
+        <div class="item">
+            <img src="/b885d56bd95497adaa716a828e130817.jpg" alt="Resident Evil 2">
+            <h4>RESIDENT EVIL 2</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/6a102c0a90727ee917f1f3e4e0233991.jpg" alt="Resident Evil 3">
+            <h4>RESIDENT EVIL 3</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/2dd7bb0533e2b9c363160a38d9527039.jpg" alt="Resident Evil 4">
+            <h4>RESIDENT EVIL 4</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/db8bf35302e78ed444833fbf95de8e9a.jpg" alt="Resident Evil 5">
+            <h4>RESIDENT EVIL 5</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/0eb44cc6b08e06b4833ebb1a299ebed3.jpg" alt="Resident Evil 6">
+            <h4>RESIDENT EVIL 6</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/3a527a763617d760fffdc7e796f901df.jpg" alt="Resident Evil 7">
+            <h4>RESIDENT EVIL 7</h4>
+            <button>download</button>
+        </div>
+        <div class="item">
+            <img src="/b7fb81dfc8a7e6079a1430fdd482931c.jpg" alt="Resident Evil 8">
+            <h4>RESIDENT EVIL 8</h4>
+            <button>download</button>
+        </div>
     </section>
+     <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/j5Xv2lM9wes" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+</body>
 
+</html>
