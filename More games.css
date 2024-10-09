@@ -1,0 +1,134 @@
+} 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('./Untitled57_20241008221615.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover, cover;
+    background-repeat: repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.10);
+    width: 99%;
+    height: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: red;
+}
+
+ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    margin: 0 4px;
+}
+
+.content {
+    color: white;
+    width: 90%;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.content h2 {
+    font-size: 90px; /* حجم العنوان الرئيسي */
+    text-transform: unset;
+    margin-bottom: 40px; /* مسافة بين العنوان الرئيسي والقصص */
+}
+
+.content h3 {
+    font-size: 32px; /* حجم عنوان القصة */
+    margin-top: 40px; /* مسافة بين كل قصة والعنوان السابق */
+}
+
+.content p {
+    letter-spacing: 1px; /* تباعد الحروف */
+    width: auto; /* العرض يتكيف مع المحتوى */
+    padding: 10px 0;
+}
+
+/* إعدادات الفيديو */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 90%;
+    height: 300px;
+    max-width: 800px;
+}
+
+/* إعدادات لأجهزة الهاتف */
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 40px; /* حجم العنوان الرئيسي في الهاتف */
+    }
+
+    .content h3 {
+        font-size: 24px; /* حجم عنوان القصة في الهاتف */
+    }
+
+    .content p {
+        font-size: 12px; /* حجم النص في الهاتف */
+    }
+
+    .video-container iframe {
+        width: 90%;
+        height: 0px; /* ارتفاع أقل للفيديو على الهواتف */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 30px; /* حجم العنوان الرئيسي في الهواتف الصغيرة */
+    }
+
+    .content h3 {
+        font-size: 20px; /* حجم عنوان القصة في الهواتف الصغيرة */
+    }
+
+    .content p {
+        font-size: 14px; /* حجم النص في الهواتف الصغيرة */
+    }
+
+    .video-container iframe {
+        height: 150px; /* ارتفاع الفيديو على الهواتف الصغيرة */
+    }
+}
+
+.exhibition {
+    color: #FF0000;
+}
